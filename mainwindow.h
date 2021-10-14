@@ -46,16 +46,18 @@ private slots:
     void on_pushButton_ClearFile_clicked();
 
 private:
+    //data
     int scale_ratio = 4;
     QString backend_path = "unspecified";
     QString model_path = "unspecified";
     QStringList working_list;
+    QString append_str = "out";
     //QStandardItemModel *displaying_model;
     QStandardItemModel displaying_model;
     Ui::MainWindow *ui;
 
+    //inner function
     void uniqueoutput(const QString &context, bool notmain = false);
     void updatelistview();
-    void run();
 };
 #endif // MAINWINDOW_H

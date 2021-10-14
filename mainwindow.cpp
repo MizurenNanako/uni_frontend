@@ -2,7 +2,8 @@
 #include "./ui_mainwindow.h"
 #include <QFileDialog>
 #include <QMessageBox>
-#include <dirent.h>
+#include <QProcess>
+#include <QThread>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,11 +18,6 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
-}
-
-void MainWindow::run()
-{
-
 }
 
 void MainWindow::uniqueoutput(const QString &context, bool notmain)
@@ -160,7 +156,10 @@ void MainWindow::updatelistview()
 void MainWindow::on_pushButton_Run_clicked()
 {
     uniqueoutput("Calling run() function...");
-    run();
+    for (int i = 0; i < working_list.length(); ++i)
+    {
+
+    }
 }
 
 void MainWindow::on_pushButton_Backend_clicked()

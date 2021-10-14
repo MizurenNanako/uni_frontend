@@ -21,6 +21,8 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        runthread.h
+        runthread.cpp
         ${TS_FILES}
 )
 
